@@ -853,11 +853,4 @@ ol { list-style: none; }
 .after-buy__step h3 { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.35rem; }
 .after-buy__step p { font-size: 0.87rem; color: var(--c-text-muted); }
 
-/* --- PRICE STRIKETHROUGH --- */
-.cta-final__price s {
-  font-size: 0.9rem;
-  color: var(--c-con);
-  text-decoration: line-through;
-  font-weight: 500;
-  margin-right: 0.5rem;
-}
+/* end */
