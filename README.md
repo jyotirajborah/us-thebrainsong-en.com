@@ -1,4 +1,4 @@
-# The Brain Song — Landing Page
+﻿# The Brain Song — Landing Page
 
 Affiliate landing page for **The Brain Song** — a Gamma brainwave audio program.  
 Domain: `us-thebrainsong-en.com`
@@ -41,7 +41,7 @@ The `.htaccess` file is ignored by these platforms. Add redirect rules via `netl
 ## Affiliate Link
 
 The CTA buttons point to the ClickBank hop link:  
-`https://85bd0ji-yf5zdzd-21ke4d0eyz.hop.clickbank.net/`
+`https://44e00pi87eiq3x85xyxhwhpf-2.hop.clickbank.net/`
 
 Update this in `index.html` if the affiliate link changes.
 
