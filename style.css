@@ -25,8 +25,8 @@
   --shadow-glow: 0 0 40px rgba(124,106,247,0.25);
   --font-body:   'Inter', system-ui, sans-serif;
   --font-display:'Playfair Display', Georgia, serif;
-  --max-w:       1120px;
-  --max-w-narrow:760px;
+  --max-w:       1280px;
+  --max-w-narrow:920px;
 }
 
 html { scroll-behavior: smooth; }
@@ -50,12 +50,16 @@ ol { list-style: none; }
   width: 100%;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2.5rem;
 }
 .container--narrow { max-width: var(--max-w-narrow); }
 
+@media (min-width: 1400px) {
+  .container { padding: 0 3rem; }
+}
+
 .section {
-  padding: 6rem 0;
+  padding: 5.5rem 0;
 }
 
 /* --- TYPOGRAPHY --- */
@@ -248,7 +252,11 @@ ol { list-style: none; }
   border-radius: 50px;
   color: var(--c-text-muted);
 }
-.trust-pill__icon { font-size: 1rem; }
+.trust-pill__icon {
+  font-size: 0.9rem;
+  color: var(--c-accent-2);
+  line-height: 1;
+}
 
 /* --- PAIN SECTION --- */
 .pain { background: var(--c-bg-2); }
@@ -266,8 +274,19 @@ ol { list-style: none; }
   transition: border-color 0.2s, transform 0.2s;
 }
 .pain-card:hover { border-color: rgba(124,106,247,0.4); transform: translateY(-3px); }
-.pain-card__icon { font-size: 2rem; margin-bottom: 0.75rem; }
-.pain-card p { font-size: 0.95rem; color: var(--c-text-muted); }
+.pain-card__icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--c-accent-2);
+  line-height: 1;
+}
+
+.pain__insight-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  color: var(--c-accent-2);
+  margin-top: 0.1rem;
+}
 
 .pain__insight {
   display: flex;
@@ -278,7 +297,9 @@ ol { list-style: none; }
   border-radius: var(--radius-md);
   padding: 1.75rem;
 }
-.pain__insight-icon { font-size: 2rem; flex-shrink: 0; }
+.pain-card p { font-size: 0.95rem; color: var(--c-text-muted); }
+
+.pain__insight-icon { font-size: 1.5rem; flex-shrink: 0; color: var(--c-accent-2); margin-top: 0.1rem; }
 .pain__insight strong { display: block; margin-bottom: 0.5rem; color: #fff; }
 .pain__insight p { font-size: 0.95rem; color: var(--c-text-muted); }
 
@@ -390,7 +411,12 @@ ol { list-style: none; }
   border-radius: var(--radius-md);
   padding: 1.5rem 1.75rem;
 }
-.bdnf-callout__icon { font-size: 2rem; flex-shrink: 0; }
+.bdnf-callout__icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  color: var(--c-accent-2);
+  margin-top: 0.1rem;
+}
 .bdnf-callout strong { display: block; color: #fff; margin-bottom: 0.4rem; }
 .bdnf-callout p { font-size: 0.9rem; color: var(--c-text-muted); }
 .bdnf-callout em { color: var(--c-accent-2); font-style: italic; }
@@ -414,7 +440,12 @@ ol { list-style: none; }
   transform: translateY(-4px);
   box-shadow: 0 8px 30px rgba(124,106,247,0.15);
 }
-.benefit-card__icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
+.benefit-card__icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--c-accent-2);
+  line-height: 1;
+}
 .benefit-card h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem; }
 .benefit-card p { font-size: 0.88rem; color: var(--c-text-muted); }
 
@@ -495,7 +526,12 @@ ol { list-style: none; }
   transition: border-color 0.2s, transform 0.2s;
 }
 .whois-card:hover { border-color: rgba(124,106,247,0.4); transform: translateY(-3px); }
-.whois-card__icon { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+.whois-card__icon {
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--c-accent-2);
+}
 .whois-card strong { display: block; font-size: 0.95rem; color: #fff; margin-bottom: 0.3rem; }
 .whois-card p { font-size: 0.83rem; color: var(--c-text-muted); }
 .whois__disclaimer {
@@ -639,7 +675,13 @@ ol { list-style: none; }
   border-radius: var(--radius-lg);
   padding: 2.5rem;
 }
-.guarantee__icon { font-size: 3.5rem; flex-shrink: 0; }
+.guarantee__icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  color: var(--c-accent-2);
+  line-height: 1;
+  margin-top: 0.2rem;
+}
 .guarantee__card h2 { font-family: var(--font-display); font-size: 1.6rem; color: #fff; margin-bottom: 0.75rem; }
 .guarantee__card p { font-size: 0.95rem; color: var(--c-text-muted); }
 @media (max-width: 600px) { .guarantee__card { flex-direction: column; padding: 1.75rem; gap: 1rem; } }
