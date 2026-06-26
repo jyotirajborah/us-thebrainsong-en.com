@@ -8,7 +8,7 @@
   },
   "then": {
     "type": "runCommand",
-    "command": "cd \"c:\\Users\\bgsmi\\OneDrive\\Documents\\us-thebrainsong-en.com\" && git add -A && git diff --cached --quiet || git commit -m \"Auto update: %date% %time%\" && git push origin main && curl \"https://www.bing.com/indexnow?url=https://us-thebrainsong-en.com/&key=04d660e23a214e61bfe16dbfc2eaed0c\"",
+    "command": "powershell -ExecutionPolicy Bypass -File \"c:\\Users\\bgsmi\\OneDrive\\Documents\\us-thebrainsong-en.com\\autopush.ps1\"",
     "timeout": 60
   }
 }
