@@ -1014,3 +1014,125 @@ ol { list-style: none; }
   height: auto;
   display: block;
 }
+
+/* ============================================
+   GLOBAL ALIGNMENT & MOBILE FIXES
+   ============================================ */
+
+/* Infographic — full width, proper containment */
+.infographic-wrap {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Buttons — allow wrapping so long text doesn't overflow */
+.btn {
+  white-space: normal;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* section-sub — full width on small screens */
+.section-sub {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Product bullets — no overflow */
+.product__bullets li {
+  word-break: break-word;
+}
+
+/* ============================================
+   ADDITIONAL MOBILE FIXES (max 480px)
+   ============================================ */
+@media (max-width: 480px) {
+
+  /* Infographic border thinned, radius reduced for small screens */
+  .infographic-wrap {
+    border-width: 1px;
+    border-radius: var(--radius-md);
+    margin-top: 1.25rem;
+  }
+
+  /* Primary CTA buttons — full width, centered */
+  .hero__cta-group .btn--primary,
+  .cta-final__inner .btn--primary {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.25rem;
+    font-size: 0.92rem;
+  }
+
+  /* Mid-page CTA banner button — full width */
+  .section[aria-label="Mid-page call to action"] .btn {
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+  }
+  .section[aria-label="Mid-page call to action"] > .container > div {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  /* Product copy button — full width */
+  .product__copy .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Guarantee button — full width */
+  .guarantee__card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Trust bar — 2x2 grid on very small screens */
+  .hero__trust-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .trust-pill {
+    justify-content: center;
+    font-size: 0.7rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  /* Product image — natural aspect ratio, no max-height clipping */
+  .product__img-wrap {
+    max-height: none;
+  }
+  .product__img-wrap img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* ============================================
+   ADDITIONAL TABLET FIXES (max 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Infographic */
+  .infographic-wrap {
+    border-width: 1px;
+  }
+
+  /* Mid-page CTA — stack on tablet too */
+  .section[aria-label="Mid-page call to action"] > .container > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  /* Product image — don't clip on tablet */
+  .product__img-wrap {
+    max-height: none;
+  }
+  .product__img-wrap img {
+    height: auto;
+    object-fit: contain;
+  }
+}
