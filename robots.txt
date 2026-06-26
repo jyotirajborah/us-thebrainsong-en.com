@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow any potential admin or private paths (none exist currently, but safe defaults)
+Disallow: /private/
+Disallow: /.env
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://us-thebrainsong-en.com/sitemap.xml

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — The Brain Song</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, #1b1154 0%, #05060f 70%);
+    }
+    .error-page__code {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #7c6af7, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+    .error-page__heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .error-page__text {
+      color: #8b90b8;
+      font-size: 1rem;
+      max-width: 420px;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <div class="error-page__code" aria-label="Error 404">404</div>
+    <h1 class="error-page__heading">Page Not Found</h1>
+    <p class="error-page__text">Looks like this page wandered off. Let's get you back to a sharper mind.</p>
+    <a href="/" class="btn btn--primary">← Back to Home</a>
+  </div>
+</body>
+</html>
