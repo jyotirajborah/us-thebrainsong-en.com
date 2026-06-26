@@ -121,6 +121,12 @@ ol { list-style: none; }
 .btn--white { background: #fff; color: #1a1a2e; }
 .btn--white:hover { background: #e8e8ff; }
 
+/* Centered contexts — override align-self */
+.hero__cta-group .btn,
+.cta-final__inner .btn {
+  align-self: center;
+}
+
 /* --- BADGE --- */
 .badge {
   display: inline-block;
