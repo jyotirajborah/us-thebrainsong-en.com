@@ -513,31 +513,42 @@ ol { list-style: none; }
 .whois { background: var(--c-bg); }
 .whois__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
+@media (max-width: 768px) { .whois__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .whois__grid { grid-template-columns: 1fr; } }
+
 .whois-card {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
+  border-left: 3px solid var(--c-accent);
   border-radius: var(--radius-md);
-  padding: 1.5rem;
-  text-align: center;
+  padding: 1.25rem 1.5rem;
   transition: border-color 0.2s, transform 0.2s;
 }
-.whois-card:hover { border-color: rgba(124,106,247,0.4); transform: translateY(-3px); }
-.whois-card__icon {
-  font-size: 1.2rem;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  color: var(--c-accent-2);
+.whois-card:hover {
+  border-color: var(--c-accent-2);
+  border-left-color: var(--c-accent-2);
+  transform: translateY(-2px);
 }
-.whois-card strong { display: block; font-size: 0.95rem; color: #fff; margin-bottom: 0.3rem; }
-.whois-card p { font-size: 0.83rem; color: var(--c-text-muted); }
+.whois-card__body strong {
+  display: block;
+  font-size: 0.97rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.whois-card__body p {
+  font-size: 0.85rem;
+  color: var(--c-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
 .whois__disclaimer {
   font-size: 0.8rem;
   color: var(--c-text-muted);
-  text-align: center;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-sm);
   padding: 0.75rem 1.25rem;
